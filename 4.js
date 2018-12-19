@@ -3,7 +3,13 @@ var readline = require('readline-sync');
 function sortArray(arr){
   var originalArray = arr;
   function sortArray(){
-    var sortedArray = originalArray.sort();
+    var sortedArray;
+    if(arr.id !==undefined){
+      sortedArray= arr.sort(function(a, b){
+    return a.id - b.id;
+    })
+
+    } else sortedArray = originalArray.sort();
     function getSortedArray(){
       return sortedArray;
     }
