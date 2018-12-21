@@ -12,5 +12,4 @@ function xmlParserHelper(path){
       else console.log(err);
    });
 }
-
 xmlParserHelper(path);
