@@ -9,10 +9,8 @@ var pathExtention ='.jpg';
 function newDir(int=0){
   if(!fs.existsSync(dir+int)){
     fs.mkdirSync(dir+int);
-    pathFront = dir+int+'/Image';
-
   }
-  else pathFront = dir+int+'/Image';  
+  pathFront = dir+int+'/Image';
 }
 
 function pathset(key){
