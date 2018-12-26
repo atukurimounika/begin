@@ -1,27 +1,23 @@
-function GroupObjectsBy(jsonObj){
-  var i,constant=-1,newObj='{';
-  for(var i=0;i<jsonObj.Tv.length;i++){
-    var j=i;
-    if (i===constant) continue;
-    var temp = jsonObj.Tv[j].channel;
-    newObj+=JSON.stringify(temp)+':[';
-    while(jsonObj.Tv[j].channel===temp){
-    constant=j;
-    newObj+=JSON.stringify(jsonObj.Tv[j])+',';
-    if(j===jsonObj.Tv.length-1) break;
-    else j++;
+function GroupObjectsBy(obj) {
+  var result = {};
+  for (var x in obj) {
+    var currentChannel = obj[x].channel;
+    for (var y in obj) {
+      if (currentChannel === obj[y].channel) {
+        if (!result.hasOwnProperty(currentChannel)) {
+          result[currentChannel] = [];
+          result[currentChannel].push(obj[y]);
+        } else {
+          if (result[currentChannel].indexOf(obj[y]) == -1)
+            result[currentChannel].push(obj[y]);
+        }
+      }
     }
-    newObj = newObj.substring(0, newObj.length - 1);
-    newObj+='],';
   }
-  newObj = newObj.substring(0, newObj.length - 1);
-  newObj+='}';
-  var jsonNewObj= JSON.parse(newObj);
-  console.log(jsonNewObj);
-};
+  console.log(result);;
+}
 
-var jsnObj={
-  'Tv':[
+var jsnObj=[
   {
     "channel": "A",
     "name": "shoe"
@@ -39,5 +35,5 @@ var jsnObj={
     "name": "electronics"
   }
 
-]};
+];
 GroupObjectsBy(jsnObj);
