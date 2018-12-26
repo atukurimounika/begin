@@ -4,12 +4,7 @@ function sortArray(arr){
   var originalArray = arr;
   function sortArray(){
     var sortedArray;
-    if(arr.id !==undefined){
-      sortedArray= arr.sort(function(a, b){
-    return a.id - b.id;
-    })
-
-    } else sortedArray = originalArray.sort();
+    sortedArray = originalArray.sort();
     function getSortedArray(){
       return sortedArray;
     }
@@ -18,11 +13,13 @@ function sortArray(arr){
   return sortArray;
 }
 
-function newSortJsonObj(jsonObj){
-
-  sortArray.apply(jsonObj);
-}
-
+// function newSortJsonObj(jsonObj){
+//
+//   console.log(sortArray.apply(jsonObj)()());
+// }
+//
+// var jsnObj={"id":[5,4,3,2,1]};
+// newSortJsonObj(jsnObj);
 
 
 function inputValues(){
