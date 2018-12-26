@@ -35,6 +35,8 @@
         <baseId>1-4</baseId>
         <isActive>true</isActive>
         <features>
+          <feature>parent</feature>
+          <feature>first entry</feature>
         </features>
         <searchTerms>
           <searchTermValue>glue</searchTermValue>
@@ -48,7 +50,7 @@
     <baseId>10</baseId>
     <isActive>true</isActive>
     <contentType>
-    </contentType>       
+    </contentType>
     <features>
     </features>
     <searchTerms>
@@ -61,29 +63,29 @@
         <baseId>10-1</baseId>
         <isActive>true</isActive>
         <features>
-        </features>
-        <searchTerms>
-          <searchTermValue>glue</searchTermValue>
-        </searchTerms>
-        <baseId>10-2</baseId>
-        <isActive>false</isActive>
-        <features>
-        </features>
-        <searchTerms>
-        </searchTerms>
-        <baseId>10-3</baseId>
-        <isActive>true</isActive>
-        <features>
-        </features>
-        <searchTerms>
-        </searchTerms>
-        <baseId>10-4</baseId>
-        <isActive>true</isActive>
-        <features>
-        </features>
-        <searchTerms>
-        </searchTerms>
-      </childProduct>
-    </childProducts>
-  </product>
-</products>"
+         </features>
+         <searchTerms>
+           <searchTermValue>glue</searchTermValue>
+         </searchTerms>
+         <baseId>10-2</baseId>
+         <isActive>false</isActive>
+         <features>
+         </features>
+         <searchTerms>
+         </searchTerms>
+         <baseId>10-3</baseId>
+         <isActive>true</isActive>
+         <features>
+         </features>
+         <searchTerms>
+         </searchTerms>
+         <baseId>10-4</baseId>
+         <isActive>true</isActive>
+         <features>
+         </features>
+         <searchTerms>
+         </searchTerms>
+       </childProduct>
+     </childProducts>
+   </product>
+ </products>

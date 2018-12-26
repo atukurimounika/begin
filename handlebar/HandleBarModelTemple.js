@@ -25,7 +25,7 @@
                <baseId>{{baseId}}</baseId>
                <isActive>{{isActive}}</isActive>
                <features>
-                 {{#each features}}
+                 {{#each feature}}
                    <feature>{{this}}</feature>
 				   {{/each}}
                </features>
