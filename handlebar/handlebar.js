@@ -1,6 +1,14 @@
-var templatePath = ('./HandleBarModelTemple.xml');
+var templatePath = ('./HandleBarModelTemple.js');
+var filepath = './data.xml';
 var fs = require('fs');
-
-fs.readFile(path, function(err,data){
-    var template = Handlebars.coomplie(data);
-});
+var arr= require('./HandleBarFeeder.js').arr;
+var handlebar = require('handlebars');
+//console.log(arr);
+ fs.readFile(templatePath,'utf8',function(err,data){
+     var template = handlebar.compile(JSON.stringify(data));
+     var result = template(arr);
+     //console.log(result);
+     fs.writeFile(filepath,result,function(err){
+        if (err) console.log(err);
+      });
+ });

@@ -73,3 +73,5 @@ var arr = [
     ]
   }
 ];
+
+module.exports.arr= arr;
