@@ -1,12 +1,12 @@
 var obj={
 
-  _version:function(versionName){
+  _setVersion:function(versionName){
     this._version=versionName;
   },
-  _channel: function(channelName){
+  _setChannel: function(channelName){
     this._channel=channelName;
   },
-  _keyFeild:function(feildName){
+  _setKeyFeild:function(feildName){
     this._keyFeild=feildName;
   },
 
@@ -23,15 +23,15 @@ var obj={
     console.log(this._keyFeild);
   }
 }
-obj._version('3.2');
-obj._keyFeild(36);
+obj._setVersion('3.2');
+obj._setKeyFeild(36);
 obj.getKeyFeild();
 
 var newObj= [{'channel': 'A'}, {'channel': 'B'}, {'channel':'C'}];
 
 obj.getKeyFeild.prototype.arrMethod =function(newObj){
   var arr=[];
-  for(i in newObj){
+  for(var i in newObj){
     arr.push(newObj[i].channel);
   }
   console.log(arr);
