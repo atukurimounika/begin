@@ -27,8 +27,8 @@
                <features>
                  {{#each features}}
                    <feature>{{this}}</feature>
+				   {{/each}}
                </features>
-               {{/each}}
                <searchTerms>
                  {{#each searchTerms}}
                    <searchTermValue>{{this}}</searchTermValue>
