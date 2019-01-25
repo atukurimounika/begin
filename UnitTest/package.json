@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "simple testing",
+  "main": "GetHomePage.js",
+  "scripts": {
+    "test": "mocha||true;"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "chai": "^4.2.0",
+    "fs": "0.0.1-security",
+    "mocha": "^5.2.0",
+    "nock": "^10.0.6"
+  }
+}
